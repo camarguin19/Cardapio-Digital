@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#283b30"><meta name="description" content="Mesa & Alma — cozinha de encontros. Conheça nosso cardápio digital, encontre seu novo favorito e escolha com calma.">
+  <title>Mesa & Alma · Cardápio</title>
+  <link rel="icon" href="./public/images/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./public/output.css">
+  <script src="./public/menu-data.js" defer></script><script src="./public/vendor/qrcode.js" defer></script><script src="./public/vendor/jszip.min.js" defer></script><script src="./src/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#cardapio">Ir para o cardápio</a>
+  <header class="site-header"><a class="brand" href="#inicio" aria-label="Voltar ao início"><span class="brand-name">Mesa & Alma<small>COZINHA DE ENCONTROS</small></span></a><nav aria-label="Menu principal"><a href="#cardapio">Cardápio</a><a href="#visite">A casa</a></nav><button class="menu-search icon-button" data-action="search" aria-label="Buscar no cardápio"><i data-icon="search"></i></button></header>
+  <main>
+    <section class="hero" id="inicio"><div class="hero-copy"><p class="eyebrow">À MESA, SEM PRESSA.</p><h1>Simplesmente<br><em>bom de estar.</em></h1><p class="hero-description">Sabores da casa, feitos para o seu momento.</p></div><div class="hero-visual"><img id="hero-image" src="./public/images/hero.avif" alt="Prato da casa com ingredientes frescos" fetchpriority="high"></div></section>
+    <section class="menu-section" id="cardapio"><div class="section-intro"><h2>Nosso cardápio</h2><span>Escolha com calma.</span></div><div class="menu-toolbar"><div class="category-scroll" id="categories" role="group" aria-label="Categorias do cardápio"></div><label class="search-box"><i data-icon="search"></i><input type="search" id="menu-search" placeholder="Buscar no cardápio" aria-label="Buscar prato ou ingrediente"></label></div><div class="diet-row"><span id="result-count" role="status" aria-live="polite"></span><div><button data-diet="vegetariano" aria-pressed="false"><i data-icon="leaf"></i>Vegetariano</button><button data-diet="destaque" aria-pressed="false">Favoritos</button></div></div><div id="products" class="product-grid"></div><p class="menu-footnote"><i data-icon="info"></i> Alergias ou restrições? Consulte nossa equipe antes de pedir.</p></section>
+    <section class="visit" id="visite"><div><h2>Sinta-se em casa.</h2><p class="visit-note">Boa comida, bons encontros.</p></div><div class="visit-details"><div><span>ENDEREÇO</span><p id="address"></p></div><div><span>HORÁRIOS</span><p id="hours"></p></div></div></section>
+  </main>
+  <footer class="site-footer"><small>© <span id="year"></span> <span class="restaurant-name">Mesa & Alma</span> · Projeto demonstrativo</small><div class="footer-tools"><button class="edit-link" data-action="editor">Editar cardápio</button><button class="edit-link" data-action="qr">QR para as mesas</button></div></footer>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-header"><div><p class="eyebrow" id="dialog-label">MESA & ALMA</p><h2 id="dialog-title"></h2></div><button class="icon-button" id="dialog-close" aria-label="Fechar">×</button></div><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div><div id="print-area" aria-hidden="true"></div>
+</body></html>
